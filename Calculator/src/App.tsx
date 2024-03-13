@@ -1,14 +1,19 @@
 import './App.css'
 import { useState } from 'react'
+import Digit from './Components/Digit/Digit'
+import Operator from './Components/Operator/Operator'
 
 function App() {
 
+  let test : string = "test"
 
   const [currentValue, setCurrentValue] = useState<string>("0")
   const [operation, setOperation] = useState<string>("")
   const [previousValue, setPreviousValue] = useState<string>("0")
   const [overwrite, setOverwrite] = useState<boolean>(true)
   
+  const operator: string[] = ['+', '-', '*', '/', '=', 'C'];
+  const digit: string[] = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
 
   function clear() {
     setPreviousValue("")
@@ -65,7 +70,7 @@ function App() {
     setOverwrite(true)
   }
 
-  function setDigit(digit: string){
+  function setDigit(digit: string) {
     //if(currentValue[0] === "0" && digit === "0") return
     if(currentValue.includes(".") && digit === ".") return
     if (overwrite && digit !== ".") {
@@ -73,7 +78,7 @@ function App() {
     } else {
         setCurrentValue(currentValue === "0" ? digit : currentValue + digit)
     }
-
+    console.log(digit)
     setOverwrite(false)
     
   }
@@ -103,6 +108,18 @@ function App() {
       <button onClick={() =>selectOperation("/")}>/</button>
       <button onClick={() =>endOperation()}>=</button>
       <button onClick={() =>clear()}>C</button>
+      <br />
+      <br />
+      { digit.map((digit,index) => {
+        return <Digit  key={index} digit={digit} pickDigit={setDigit}/>
+      }) }
+      <br />
+      <br />
+      { operator.map((op,index) => {
+        return <Operator key={index} operator={op} pickOperator={selectOperation} endOperation={endOperation} clear={clear} />
+      } )}
+      <br />
+      <br />
     </>
   )
 }
