@@ -89,26 +89,6 @@ function App() {
   return (
     <>
       <h1>{currentValue}</h1>
-      <button onClick={() =>setDigit("0")}>0</button>
-      <button onClick={() =>setDigit("1")}>1</button>
-      <button onClick={() =>setDigit("2")}>2</button>
-      <button onClick={() =>setDigit("3")}>3</button>
-      <button onClick={() =>setDigit("4")}>4</button>
-      <button onClick={() =>setDigit("5")}>5</button>
-      <button onClick={() =>setDigit("6")}>6</button>
-      <button onClick={() =>setDigit("7")}>7</button>
-      <button onClick={() =>setDigit("8")}>8</button>
-      <button onClick={() =>setDigit("9")}>9</button>
-      <button onClick={() =>setDigit(".")}>.</button>
-      <br />
-      <br />
-      <button onClick={() =>selectOperation("+")}>+</button>
-      <button onClick={() =>selectOperation("-")}>-</button>
-      <button onClick={() =>selectOperation("*")}>*</button>
-      <button onClick={() =>selectOperation("/")}>/</button>
-      <button onClick={() =>endOperation()}>=</button>
-      <button onClick={() =>clear()}>C</button>
-      <br />
       <br />
       { digit.map((digit,index) => {
         return <Digit  key={index} digit={digit} pickDigit={setDigit}/>
