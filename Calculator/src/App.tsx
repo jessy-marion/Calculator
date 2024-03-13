@@ -2,6 +2,7 @@ import './App.css'
 import { useState } from 'react'
 import Digit from './Components/Digit/Digit'
 import Operator from './Components/Operator/Operator'
+import Screen from './Components/Screen/Screen'
 
 function App() {
 
@@ -83,12 +84,9 @@ function App() {
     
   }
   
-  
-  
-
   return (
     <>
-      <h1>{currentValue}</h1>
+      <Screen currentValue={currentValue} />
       <br />
       { digit.map((digit,index) => {
         return <Digit  key={index} digit={digit} pickDigit={setDigit}/>
