@@ -1,0 +1,8 @@
+.screen {
+    display: flex;
+    justify-content: end;
+    background: #0B0301;
+    color: #9F262E;
+    height: 100px;
+    padding: 1rem;
+}

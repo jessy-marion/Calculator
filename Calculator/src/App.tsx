@@ -14,7 +14,7 @@ function App() {
   const [overwrite, setOverwrite] = useState<boolean>(true)
   
   const operator: string[] = ['+', '-', '*', '/', '=', 'C'];
-  const digit: string[] = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
+  const digit: string[] = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.'];
 
   function clear() {
     setPreviousValue("")
@@ -53,7 +53,6 @@ function App() {
         return
     }
     return result
-
   }
 
   function endOperation() {
@@ -81,24 +80,23 @@ function App() {
     }
     console.log(digit)
     setOverwrite(false)
-    
   }
   
   return (
-    <>
+    <div className="calculator">
       <Screen currentValue={currentValue} />
       <br />
-      { digit.map((digit,index) => {
-        return <Digit  key={index} digit={digit} pickDigit={setDigit}/>
+      <div className='buttonsArea' > {digit.map((digit,index) => {
+        return <Digit number={index + 1}  key={index} digit={digit} pickDigit={setDigit}/>
       }) }
-      <br />
-      <br />
       { operator.map((op,index) => {
-        return <Operator key={index} operator={op} pickOperator={selectOperation} endOperation={endOperation} clear={clear} />
-      } )}
+        return <Operator  key={index} operator={op} pickOperator={selectOperation} endOperation={endOperation} clear={clear} />
+      } )} 
+      </div>
+      
       <br />
       <br />
-    </>
+    </div>
   )
 }
 

@@ -1,42 +1,112 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.calculator {
+  background: #c3c8c3;
+  padding: 2rem;
+  
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.buttonsArea{
+background: #BFC0BB;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(5,1fr);
+grid-template-areas:  "clear . . ."
+                      "digit7 digit8 digit9 soustraction"
+                      "digit4 digit5 digit6 division"
+                      "digit1 digit2 digit3 multiplication"
+                      "digit0 digitDot egal addition";
+}
+
+.digit1grid {
+  background: #050606;
+  grid-area: digit1;
+}
+
+.digit2grid {
+  background: #050606;
+  grid-area: digit2;
+}
+
+.digit3grid {
+  background: #050606;
+  grid-area: digit3;
+}
+
+.digit4grid {
+  background: #050606;
+  grid-area: digit4;
+}
+
+.digit5grid {
+  background: #050606;
+  grid-area: digit5;
+}
+
+.digit6grid {
+  background: #050606;
+  grid-area: digit6;
+}
+
+.digit7grid {
+  background: #050606;
+  grid-area: digit7;
+}
+
+.digit8grid {
+  background: #050606;
+  grid-area: digit8;
+}
+
+.digit9grid {
+  background: #050606;
+  grid-area: digit9;
+}
+
+.digit10grid {
+  background: #050606;
+  grid-area: digit0;
+}
+
+.digit11grid {
+  background: #050606;
+  grid-area: digitDot;
+} 
+
+.operatorAdditiongrid {
+color:black;
+grid-area: addition;
+}
+
+.operatorSoustractiongrid {
+  color:black;
+  grid-area: soustraction;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
+.operatorMultiplicationgrid {
+    color:black;
+    grid-area: multiplication;
+    }
 
-.card {
-  padding: 2em;
-}
+.operatorDivisiongrid {
+      color:black;
+      grid-area: division;
+      }
 
-.read-the-docs {
-  color: #888;
-}
+.operatorEgalgrid {
+        color:black;
+        grid-area: egal;
+        }
+
+.operatorCleargrid {
+          color:black;
+          grid-area: clear;
+          }
+
+
+
+/*voir si je dois inverser avec le css du index.css BFC0BB
