@@ -7,7 +7,7 @@
 .calculator {
   background: #c3c8c3;
   padding: 2rem;
-  
+  border-radius: 5px;
 }
 
 .buttonsArea{
@@ -22,58 +22,74 @@ grid-template-areas:  "clear . . ."
                       "digit0 digitDot egal addition";
 }
 
+
+.operator, .digit {
+  font-size: 1.6rem;
+  border-radius: 5px;
+  
+}
+
+.digit {
+  background: linear-gradient(90deg, rgba(6,7,7,1) 0%, rgba(58,73,75,1) 51%);
+}
+
+.operator {
+  background: linear-gradient(90deg, rgba(165,74,16,1) 0%, rgba(202,132,48,1) 51%);
+}
+
+
 .digit1grid {
-  background: #050606;
+  
   grid-area: digit1;
 }
 
 .digit2grid {
-  background: #050606;
+  
   grid-area: digit2;
 }
 
 .digit3grid {
-  background: #050606;
+  
   grid-area: digit3;
 }
 
 .digit4grid {
-  background: #050606;
+  
   grid-area: digit4;
 }
 
 .digit5grid {
-  background: #050606;
+  
   grid-area: digit5;
 }
 
 .digit6grid {
-  background: #050606;
+  
   grid-area: digit6;
 }
 
 .digit7grid {
-  background: #050606;
+  
   grid-area: digit7;
 }
 
 .digit8grid {
-  background: #050606;
+  
   grid-area: digit8;
 }
 
 .digit9grid {
-  background: #050606;
+  
   grid-area: digit9;
 }
 
 .digit10grid {
-  background: #050606;
+  
   grid-area: digit0;
 }
 
 .digit11grid {
-  background: #050606;
+  
   grid-area: digitDot;
 } 
 

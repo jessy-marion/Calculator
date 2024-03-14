@@ -1,3 +1,13 @@
 .operatorProperties {
-    color: orange
+    color: white
+}
+
+.key {
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    background: #D77230 ;
+    height: 60px;
+    width: 60px;
+    border-radius: 25%;
 }

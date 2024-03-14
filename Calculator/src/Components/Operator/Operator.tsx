@@ -48,6 +48,6 @@ let transcribeOperator: string = "";
                 
             }
         }
-        }>{props.operator}</button>
+        }><div className={styles.key}>{props.operator}</div> </button>
     )
 }
