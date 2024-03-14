@@ -16,3 +16,8 @@
     width: 60px;
     border-radius: 25%;
 }
+
+
+.key:focus {
+   background:  yellow;
+}

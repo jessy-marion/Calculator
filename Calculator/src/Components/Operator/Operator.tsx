@@ -15,10 +15,10 @@ let transcribeOperator: string = "";
         case "-":
             transcribeOperator = "Soustraction"
           break
-        case "*":
+        case "x":
             transcribeOperator = "Multiplication"
           break
-        case "/":
+        case "÷":
             transcribeOperator = "Division"
           break
           case "=":

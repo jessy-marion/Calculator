@@ -23,19 +23,35 @@ grid-template-areas:  "clear . . ."
 }
 
 
-.operator, .digit {
+.operator, .digit, .function {
   font-size: 1.6rem;
   border-radius: 5px;
-  
+  color: white;
 }
 
 .digit {
   background: linear-gradient(90deg, rgba(6,7,7,1) 0%, rgba(58,73,75,1) 51%);
 }
 
+
+
+
 .operator {
+  background: linear-gradient(90deg, rgba(156,155,153,1) 0%, rgba(255,255,255,1) 51%);
+}
+
+.function {
   background: linear-gradient(90deg, rgba(165,74,16,1) 0%, rgba(202,132,48,1) 51%);
 }
+ .function  .key {
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+  background: #D77230 ;
+  height: 60px;
+  width: 60px;
+  border-radius: 25%;
+ }
 
 
 .digit1grid {

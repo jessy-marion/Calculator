@@ -1,12 +1,12 @@
 .operatorProperties {
-    color: white
+    color: black
 }
 
 .key {
     display: flex;
     align-items: center;
     justify-content: center ;
-    background: #D77230 ;
+    background: white;
     height: 60px;
     width: 60px;
     border-radius: 25%;

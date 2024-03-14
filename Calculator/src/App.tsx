@@ -13,7 +13,7 @@ function App() {
   const [previousValue, setPreviousValue] = useState<string>("0")
   const [overwrite, setOverwrite] = useState<boolean>(true)
   
-  const operator: string[] = ['+', '-', '*', '/', '=', 'C'];
+  const operator: string[] = ['+', '-', 'x', '÷', '=', 'C'];
   const digit: string[] = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.'];
 
   function clear() {
@@ -43,10 +43,10 @@ function App() {
       case "-":
         result = previous - current
         break
-      case "*":
+      case "x":
         result = previous * current
         break
-      case "/":
+      case "÷":
         result = previous / current
         break
       default:
@@ -91,7 +91,10 @@ function App() {
       }) }
       { operator.map((op,index) => {
         return <Operator  key={index} operator={op} pickOperator={selectOperation} endOperation={endOperation} clear={clear} />
-      } )} 
+      } )}
+        <button className='function'><div className='key'>M+</div></button>
+        <button className='function' ><div className='key'>M-</div></button>
+        <button className='function'><div className='key'>MR</div></button>
       </div>
       
       <br />
