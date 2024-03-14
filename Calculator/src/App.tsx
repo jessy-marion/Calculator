@@ -84,6 +84,17 @@ function App() {
   
   return (
     <div className="calculator">
+
+      <div className='stripesContainer'>
+        <div className='stripe'></div>
+        <div className='stripe'></div>
+        <div className='stripe'></div>
+        <div className='stripe'></div>
+        <div className='stripe'></div>
+        <div className='stripe'></div>
+        <div className="name">Calculator</div>
+      </div>
+
       <Screen currentValue={currentValue} />
       <br />
       <div className='buttonsArea' > {digit.map((digit,index) => {
@@ -96,7 +107,6 @@ function App() {
         <button className='function' ><div className='key'>M-</div></button>
         <button className='function'><div className='key'>MR</div></button>
       </div>
-      
       <br />
       <br />
     </div>
