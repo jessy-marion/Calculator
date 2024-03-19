@@ -6,7 +6,7 @@ import Screen from './Components/Screen/Screen'
 
 function App() {
 
-  let test : string = "test"
+  //let _test : string = "test"
 
   const [currentValue, setCurrentValue] = useState<string>("0")
   const [operation, setOperation] = useState<string>("")
@@ -23,10 +23,10 @@ function App() {
     setOverwrite(true)
   }
 
-  function del() {
+  /*function _del() {
     setCurrentValue("0")
     setOverwrite(true)
-  }
+  }*/
 
   function calculate() {
     
